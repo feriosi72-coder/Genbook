@@ -1,419 +1,174 @@
-# Genbook
-Voici une structure complète et logique pour un site web HTML permettant :
-
-1. de coller un lien de conversation Claude,
-2. d’extraire toute la discussion,
-3. de la reformater proprement,
-4. de générer un PDF,
-5. puis de sauvegarder/exporter le fichier.
-
----
-
-# Structure du site web
-
-## 1. PAGE D’ACCUEIL
-
-### Objectif
-
-Présenter l’outil et son fonctionnement.
-
-### Éléments
-
-* Logo
-* Nom de l’application
-* Slogan
-* Bouton “Commencer”
-* Illustration explicative
-* Présentation rapide des fonctionnalités
-
-### Sections
-
-* Hero section
-* Fonctionnalités
-* Comment ça marche
-* FAQ
-* Footer
-
----
-
-# 2. PAGE / INTERFACE PRINCIPALE
-
-## A. Barre supérieure (Header)
-
-### Contenu
-
-* Logo
-* Nom de l’outil
-* Menu navigation
-* Bouton thème clair/sombre
-* Profil utilisateur (optionnel)
-
----
-
-# 3. ZONE D’IMPORT DU LIEN CLAUDE
-
-## Bloc principal
-
-### Champs
-
-* Champ URL du chat Claude
-* Bouton “Analyser”
-* Bouton “Coller automatiquement”
-* Historique des liens récents
-
-### Vérifications
-
-* Validation du lien
-* Détection format Claude
-* Vérification accessibilité conversation
-
-### États UI
-
-* Attente
-* Analyse en cours
-* Succès
-* Erreur
-
----
-
-# 4. MODULE D’EXTRACTION DE CONVERSATION
-
-## Fonction
-
-Lire la conversation complète.
-
-### Ce module gère :
-
-* Messages utilisateur
-* Réponses Claude
-* Horodatage
-* Code blocks
-* Images éventuelles
-* Tableaux
-* Titres
-* Mise en page
-
-### Affichage
-
-* Timeline conversationnelle
-* Bulles de discussion
-* Pagination longue conversation
-* Scroll intelligent
-
----
-
-# 5. MODULE DE TRANSCRIPTION / FORMATAGE
-
-## Objectif
-
-Transformer la discussion en document lisible.
-
-### Options de formatage
-
-* Style ebook
-* Style rapport
-* Style brut
-* Style conversation
-* Style professionnel
-
-### Paramètres utilisateur
-
-* Taille police
-* Police d’écriture
-* Marges
-* Couleurs
-* En-têtes/pieds de page
-* Numérotation pages
-
----
-
-# 6. MODULE D’ÉDITION
-
-## Fonction
-
-Permettre de modifier le contenu avant export.
-
-### Fonctionnalités
-
-* Éditeur de texte riche
-* Suppression de messages
-* Renommage sections
-* Ajout titre
-* Ajout couverture PDF
-* Réorganisation blocs
-
-### Outils
-
-* Gras
-* Italique
-* Titres
-* Listes
-* Citations
-* Blocs code
-
----
-
-# 7. APERÇU PDF
-
-## Vue temps réel
-
-### Affichage
-
-* Simulation A4
-* Pagination réelle
-* Aperçu couverture
-* Table des matières automatique
-
-### Contrôles
-
-* Zoom
-* Mode lecture
-* Plein écran
-* Navigation pages
-
----
-
-# 8. MODULE DE GÉNÉRATION PDF
-
-## Fonction
-
-Créer le fichier final.
-
-### Paramètres PDF
-
-* Format A4 / Letter
-* Portrait / Paysage
-* Compression
-* Qualité images
-* Insertion métadonnées
-
-### Options avancées
-
-* Signet PDF
-* Liens cliquables
-* Sommaire dynamique
-* Export haute qualité
-
----
-
-# 9. SAUVEGARDE & EXPORT
-
-## Formats disponibles
-
-* PDF
-* DOCX
-* TXT
-* Markdown
-* HTML
-
-### Boutons
-
-* Télécharger
-* Sauvegarder localement
-* Envoyer email
-* Copier dans presse-papiers
-
----
-
-# 10. HISTORIQUE DES EXPORTS
-
-## Tableau historique
-
-* Nom fichier
-* Date
-* Taille
-* Type export
-* Bouton re-téléchargement
-
-### Fonctions
-
-* Recherche
-* Tri
-* Suppression
-* Duplication
-
----
-
-# 11. ESPACE UTILISATEUR (OPTIONNEL)
-
-## Fonctionnalités
-
-* Connexion
-* Création compte
-* Sauvegarde cloud
-* Synchronisation
-* Historique personnel
-
----
-
-# 12. PARAMÈTRES
-
-## Réglages globaux
-
-* Langue
-* Thème
-* Qualité PDF
-* Taille max conversation
-* Auto-sauvegarde
-
----
-
-# 13. SYSTÈME BACKEND (LOGIQUE)
-
-## Modules serveur nécessaires
-
-### A. Extracteur Claude
-
-Responsable de :
-
-* lire la page,
-* récupérer les messages,
-* parser le HTML,
-* nettoyer le contenu.
-
-### B. Parser de conversation
-
-Transforme les données brutes en structure exploitable.
-
-### C. Générateur PDF
-
-Transforme le contenu formaté en fichier téléchargeable.
-
-### D. Gestionnaire de fichiers
-
-* sauvegarde,
-* suppression,
-* stockage temporaire.
-
----
-
-# 14. ARCHITECTURE DES DOSSIERS
-
-```text
+# Claude Chat Exporter
+
+## 📄 Description
+
+Application web complète permettant d'exporter vos conversations Claude en documents professionnels (PDF, DOCX, TXT, Markdown, HTML).
+
+## ✨ Fonctionnalités
+
+### Page d'accueil
+- Présentation moderne et responsive
+- Section Hero avec appel à l'action
+- Démonstration des fonctionnalités
+- FAQ interactive
+- Navigation fluide
+
+### Interface d'application
+- **Import de lien Claude** : Collez l'URL de votre conversation
+- **Validation automatique** : Détection du format Claude
+- **Historique des liens** : Accès rapide aux conversations récentes
+- **Éditeur riche** : Modification du contenu avant export
+- **Aperçu PDF** : Visualisation en temps réel
+- **Paramètres d'export** : Format, qualité, orientation
+
+### Options d'édition
+- Mise en forme texte (gras, italique, souligné)
+- Titres hiérarchiques (H1, H2, H3)
+- Listes à puces et numérotées
+- Citations et blocs de code
+- Choix du style (ebook, rapport, conversation, professionnel)
+- Personnalisation police et taille
+
+### Export
+- Multiples formats : PDF, DOCX, TXT, Markdown, HTML
+- Paramètres PDF avancés (A4/Letter, portrait/paysage)
+- Qualité d'export ajustable
+- Signets et table des matières
+- Téléchargement direct
+- Copie dans le presse-papiers
+- Partage par email
+
+### Historique
+- Tableau des exports précédents
+- Recherche et filtrage
+- Re-téléchargement
+- Suppression d'entrées
+
+## 🏗️ Architecture
+
+```
 /project
 │
 ├── /frontend
 │   ├── /pages
-│   ├── /components
+│   │   └── index.html          # Page principale
 │   ├── /styles
-│   ├── /assets
-│   └── /services
+│   │   └── main.css            # Feuilles de style
+│   ├── /services
+│   │   └── app.js              # Logique applicative
+│   ├── /components             # Composants UI
+│   └── /assets                 # Ressources statiques
 │
 ├── /backend
-│   ├── /api
-│   ├── /extractors
-│   ├── /pdf
-│   ├── /storage
-│   └── /utils
+│   ├── /api                    # Routes API
+│   ├── /extractors             # Extraction Claude
+│   ├── /pdf                    # Génération PDF
+│   ├── /storage                # Gestion fichiers
+│   └── /utils                  # Utilitaires
 │
-├── /database
-│
-├── /exports
-│
-└── /temp
+├── /database                   # Schémas BDD
+├── /exports                    # Fichiers générés
+└── /temp                       # Fichiers temporaires
 ```
 
+## 🚀 Technologies
+
+### Frontend
+- HTML5 sémantique
+- CSS3 avec variables custom
+- JavaScript ES6+
+- LocalStorage pour la persistance
+
+### Backend (à implémenter)
+- Node.js + Express
+- Puppeteer/Playwright pour l'extraction
+- PDFKit ou jsPDF pour la génération PDF
+- Système de stockage temporaire
+
+## 💻 Installation
+
+### 1. Cloner le repository
+```bash
+git clone <repository-url>
+cd claude-chat-exporter
+```
+
+### 2. Ouvrir directement
+L'application frontend peut être ouverte directement dans un navigateur :
+```bash
+open frontend/pages/index.html
+```
+
+### 3. Ou utiliser un serveur local
+```bash
+# Avec Python
+cd frontend/pages
+python -m http.server 8000
+
+# Avec Node.js (npx)
+npx serve frontend/pages
+```
+
+## 🎨 Thèmes
+
+L'application supporte deux thèmes :
+- **Clair** : Interface lumineuse et épurée
+- **Sombre** : Mode dark pour le confort visuel
+
+Le thème est sauvegardé localement et persiste entre les sessions.
+
+## 🔒 Sécurité
+
+- Aucune donnée n'est stockée sur serveur (version frontend)
+- Les conversations sont traitées localement
+- Suppression automatique des fichiers temporaires
+- Support HTTPS recommandé pour la production
+
+## 📱 Responsive Design
+
+L'interface s'adapte à tous les écrans :
+- Desktop (≥ 968px)
+- Tablet (768px - 968px)
+- Mobile (< 768px)
+
+## 🛣️ Roadmap
+
+### Version actuelle (Frontend)
+- ✅ Page d'accueil complète
+- ✅ Interface d'application fonctionnelle
+- ✅ Éditeur de texte riche
+- ✅ Aperçu PDF
+- ✅ Système d'historique
+- ✅ Thème clair/sombre
+
+### À implémenter (Backend)
+- [ ] Extracteur Claude réel (Puppeteer)
+- [ ] API REST complète
+- [ ] Authentification utilisateur
+- [ ] Stockage cloud
+- [ ] Génération PDF server-side
+- [ ] Export vers Kindle/ePub
+- [ ] Résumé automatique IA
+- [ ] Traduction de conversations
+
+## 🤝 Contribution
+
+Les contributions sont les bienvenues ! Veuillez suivre ces étapes :
+
+1. Fork le projet
+2. Créer une branche (`git checkout -b feature/AmazingFeature`)
+3. Committer les changements (`git commit -m 'Add some AmazingFeature'`)
+4. Pusher vers la branche (`git push origin feature/AmazingFeature`)
+5. Ouvrir une Pull Request
+
+## 📝 Licence
+
+Ce projet est distribué sous licence MIT.
+
+## 📞 Contact
+
+Support : support@claudeexporter.com
+
 ---
 
-# 15. FLOW UTILISATEUR
-
-## Parcours complet
-
-### Étape 1
-
-L’utilisateur colle un lien Claude.
-
-### Étape 2
-
-Le système analyse la conversation.
-
-### Étape 3
-
-Les messages sont extraits.
-
-### Étape 4
-
-Le contenu est reformatté.
-
-### Étape 5
-
-L’utilisateur modifie si besoin.
-
-### Étape 6
-
-Le PDF est généré.
-
-### Étape 7
-
-Le fichier est téléchargé/sauvegardé.
-
----
-
-# 16. TECHNOLOGIES CONSEILLÉES
-
-## Frontend
-
-* HTML5
-* CSS3
-* JavaScript
-* React (optionnel)
-
-## Backend
-
-* Node.js
-* Express
-
-## Extraction contenu
-
-* Puppeteer
-* Playwright
-* Cheerio
-
-## Génération PDF
-
-* jsPDF
-* PDFKit
-* Puppeteer PDF
-
----
-
-# 17. SÉCURITÉ IMPORTANTE
-
-## Points critiques
-
-* Protection des liens privés
-* Suppression auto des conversations temporaires
-* Chiffrement exports
-* Limitation taille uploads
-* Gestion erreurs extraction
-
----
-
-# 18. DESIGN UI RECOMMANDÉ
-
-## Style conseillé
-
-* Minimaliste
-* Moderne SaaS
-* Interface type Notion/ChatGPT
-* Responsive mobile + desktop
-
-### Couleurs
-
-* Blanc / noir / bleu
-* Accent violet IA
-* Mode sombre
-
----
-
-# 19. BONUS POSSIBLES
-
-## Fonctionnalités premium
-
-* Résumé automatique IA
-* Détection chapitres
-* Création ebook automatique
-* Traduction conversation
-* Export Kindle/ePub
-* OCR images du chat
-* Fusion plusieurs conversations
+**Note** : Cette version est une démonstration frontend. Pour une utilisation en production avec extraction réelle des conversations Claude, une implémentation backend avec Puppeteer/Playwright est nécessaire.

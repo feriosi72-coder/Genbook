@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claude Chat Exporter - Exportez vos conversations Claude en PDF</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <span class="logo-icon">📄</span>
+                <span class="logo-text">Claude Chat Exporter</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#features">Fonctionnalités</a></li>
+                <li><a href="#how-it-works">Comment ça marche</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle" aria-label="Changer le thème">
+                <span class="sun-icon">☀️</span>
+                <span class="moon-icon">🌙</span>
+            </button>
+            <button class="btn btn-primary">Commencer</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1>Exportez vos conversations Claude en PDF</h1>
+                <p class="hero-subtitle">Transformez vos discussions avec Claude en documents professionnels, ebooks et rapports facilement.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary btn-large" onclick="scrollToApp()">Commencer maintenant</button>
+                    <button class="btn btn-secondary btn-large">Voir la démo</button>
+                </div>
+                <div class="hero-features">
+                    <div class="feature-item">
+                        <span class="feature-icon">✓</span>
+                        <span>Extraction automatique</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">✓</span>
+                        <span>Formatage professionnel</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">✓</span>
+                        <span>Export PDF/DOCX/TXT</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="illustration">
+                    <div class="chat-preview">
+                        <div class="chat-bubble user">
+                            <p>Peux-tu m'expliquer comment exporter cette conversation ?</p>
+                        </div>
+                        <div class="chat-bubble claude">
+                            <p>Bien sûr ! Utilisez notre outil pour extraire et formater votre discussion en un clic.</p>
+                        </div>
+                    </div>
+                    <div class="pdf-preview">
+                        <span class="pdf-icon">📄</span>
+                        <span>PDF Généré</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Fonctionnalités principales</h2>
+            <p class="section-subtitle">Tout ce dont vous avez besoin pour exporter vos conversations</p>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-card-icon">🔗</div>
+                    <h3>Import de lien Claude</h3>
+                    <p>Collez simplement l'URL de votre conversation Claude pour commencer l'extraction.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card-icon">📝</div>
+                    <h3>Extraction complète</h3>
+                    <p>Récupère tous les messages, codes, images et mises en forme de la conversation.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card-icon">🎨</div>
+                    <h3>Formatage personnalisé</h3>
+                    <p>Choisissez entre plusieurs styles : ebook, rapport, conversation, professionnel.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card-icon">✏️</div>
+                    <h3>Édition avancée</h3>
+                    <p>Modifiez, réorganisez et personnalisez le contenu avant l'export.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card-icon">📄</div>
+                    <h3>Génération PDF</h3>
+                    <p>Créez des PDF haute qualité avec sommaire, signets et métadonnées.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card-icon">💾</div>
+                    <h3>Multi-format d'export</h3>
+                    <p>Exportez en PDF, DOCX, TXT, Markdown ou HTML selon vos besoins.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">Comment ça marche</h2>
+            <p class="section-subtitle">Exportez votre conversation en 3 étapes simples</p>
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Collez le lien</h3>
+                        <p>Copiez l'URL de votre conversation Claude et collez-la dans notre outil.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Personnalisez</h3>
+                        <p>Choisissez le format, le style et éditez le contenu si nécessaire.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Exportez</h3>
+                        <p>Téléchargez votre document dans le format de votre choix.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2 class="section-title">Questions fréquentes</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>L'outil est-il gratuit ?</span>
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Oui, notre outil propose une version gratuite avec des fonctionnalités de base. Une version premium est disponible pour des exports illimités et des fonctionnalités avancées.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Mes conversations sont-elles stockées ?</span>
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Non, nous ne stockons pas vos conversations. Les données sont traitées temporairement et supprimées automatiquement après l'export.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Quels formats sont supportés ?</span>
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Nous supportons PDF, DOCX, TXT, Markdown et HTML. Le PDF reste le format le plus populaire pour sa compatibilité.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Les blocs de code sont-ils conservés ?</span>
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Oui, tous les blocs de code, tableaux, images et mises en forme sont préservés dans l'export.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main App Interface (Hidden by default) -->
+    <section id="app-interface" class="app-interface hidden">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="container app-header-container">
+                <div class="logo">
+                    <span class="logo-icon">📄</span>
+                    <span class="logo-text">Claude Chat Exporter</span>
+                </div>
+                <nav class="app-nav">
+                    <button class="nav-btn active" data-view="import">Import</button>
+                    <button class="nav-btn" data-view="edit">Édition</button>
+                    <button class="nav-btn" data-view="preview">Aperçu</button>
+                    <button class="nav-btn" data-view="history">Historique</button>
+                </nav>
+                <div class="app-actions">
+                    <button class="theme-toggle" id="appThemeToggle" aria-label="Changer le thème">
+                        <span class="sun-icon">☀️</span>
+                        <span class="moon-icon">🌙</span>
+                    </button>
+                    <button class="settings-btn" aria-label="Paramètres">⚙️</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Import View -->
+        <div class="view-container" id="import-view">
+            <div class="container view-content">
+                <div class="import-section">
+                    <h2>Importer une conversation Claude</h2>
+                    <p class="import-description">Collez l'URL de votre conversation pour commencer l'extraction</p>
+                    
+                    <div class="url-input-group">
+                        <input type="url" id="claudeUrl" placeholder="https://claude.ai/chat/..." class="url-input">
+                        <button class="btn btn-primary" id="pasteBtn">Coller</button>
+                        <button class="btn btn-primary" id="analyzeBtn">Analyser</button>
+                    </div>
+
+                    <!-- Recent History -->
+                    <div class="recent-history">
+                        <h3>Liens récents</h3>
+                        <ul class="history-list" id="recentLinks">
+                            <!-- Dynamic content -->
+                        </ul>
+                    </div>
+
+                    <!-- Status Messages -->
+                    <div class="status-messages hidden" id="statusMessages">
+                        <div class="status-item loading hidden">
+                            <span class="spinner"></span>
+                            <span>Analyse en cours...</span>
+                        </div>
+                        <div class="status-item success hidden">
+                            <span class="status-icon">✓</span>
+                            <span>Conversation extraite avec succès !</span>
+                        </div>
+                        <div class="status-item error hidden">
+                            <span class="status-icon">✗</span>
+                            <span id="errorMessage">Erreur lors de l'extraction</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Edit View -->
+        <div class="view-container hidden" id="edit-view">
+            <div class="container view-content edit-layout">
+                <div class="editor-toolbar">
+                    <button class="toolbar-btn" data-command="bold"><b>B</b></button>
+                    <button class="toolbar-btn" data-command="italic"><i>I</i></button>
+                    <button class="toolbar-btn" data-command="underline"><u>U</u></button>
+                    <div class="toolbar-separator"></div>
+                    <button class="toolbar-btn" data-command="formatBlock" data-value="H1">H1</button>
+                    <button class="toolbar-btn" data-command="formatBlock" data-value="H2">H2</button>
+                    <button class="toolbar-btn" data-command="formatBlock" data-value="H3">H3</button>
+                    <div class="toolbar-separator"></div>
+                    <button class="toolbar-btn" data-command="insertUnorderedList">• Liste</button>
+                    <button class="toolbar-btn" data-command="insertOrderedList">1. Liste</button>
+                    <div class="toolbar-separator"></div>
+                    <button class="toolbar-btn" data-command="formatBlock" data-value="blockquote">Citation</button>
+                    <button class="toolbar-btn" data-command="formatBlock" data-value="pre">Code</button>
+                </div>
+                
+                <div class="editor-content">
+                    <div class="conversation-editor" id="conversationEditor" contenteditable="true">
+                        <!-- Dynamic conversation content -->
+                    </div>
+                </div>
+
+                <div class="format-options">
+                    <h3>Options de formatage</h3>
+                    <div class="option-group">
+                        <label>Style</label>
+                        <select id="formatStyle">
+                            <option value="ebook">Ebook</option>
+                            <option value="report">Rapport</option>
+                            <option value="conversation">Conversation</option>
+                            <option value="professional">Professionnel</option>
+                        </select>
+                    </div>
+                    <div class="option-group">
+                        <label>Taille police</label>
+                        <input type="range" id="fontSize" min="10" max="24" value="14">
+                    </div>
+                    <div class="option-group">
+                        <label>Police</label>
+                        <select id="fontFamily">
+                            <option value="Arial">Arial</option>
+                            <option value="Times New Roman">Times New Roman</option>
+                            <option value="Georgia">Georgia</option>
+                            <option value="Courier New">Courier New</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-primary" id="addCoverPage">Ajouter couverture</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Preview View -->
+        <div class="view-container hidden" id="preview-view">
+            <div class="container view-content preview-layout">
+                <div class="preview-controls">
+                    <button class="preview-btn" id="zoomOut">-</button>
+                    <span id="zoomLevel">100%</span>
+                    <button class="preview-btn" id="zoomIn">+</button>
+                    <button class="preview-btn" id="fullscreen">⛶</button>
+                </div>
+                
+                <div class="pdf-preview-container" id="pdfPreview">
+                    <div class="pdf-page a4-page">
+                        <div class="page-content">
+                            <!-- Dynamic PDF preview content -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="export-settings">
+                    <h3>Paramètres d'export</h3>
+                    <div class="option-group">
+                        <label>Format</label>
+                        <select id="exportFormat">
+                            <option value="pdf">PDF</option>
+                            <option value="docx">DOCX</option>
+                            <option value="txt">TXT</option>
+                            <option value="md">Markdown</option>
+                            <option value="html">HTML</option>
+                        </select>
+                    </div>
+                    <div class="option-group">
+                        <label>Format papier</label>
+                        <select id="paperSize">
+                            <option value="A4">A4</option>
+                            <option value="Letter">Letter</option>
+                        </select>
+                    </div>
+                    <div class="option-group">
+                        <label>Orientation</label>
+                        <select id="orientation">
+                            <option value="portrait">Portrait</option>
+                            <option value="landscape">Paysage</option>
+                        </select>
+                    </div>
+                    <div class="option-group">
+                        <label>Qualité</label>
+                        <select id="quality">
+                            <option value="high">Haute</option>
+                            <option value="medium">Moyenne</option>
+                            <option value="low">Basse</option>
+                        </select>
+                    </div>
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="includeBookmarks" checked>
+                        Signets PDF
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="includeTOC" checked>
+                        Table des matières
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <!-- History View -->
+        <div class="view-container hidden" id="history-view">
+            <div class="container view-content">
+                <h2>Historique des exports</h2>
+                <div class="search-bar">
+                    <input type="text" id="searchHistory" placeholder="Rechercher...">
+                    <button class="btn btn-secondary">Rechercher</button>
+                </div>
+                <table class="history-table">
+                    <thead>
+                        <tr>
+                            <th>Nom du fichier</th>
+                            <th>Date</th>
+                            <th>Taille</th>
+                            <th>Type</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="historyTableBody">
+                        <!-- Dynamic history entries -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Export Actions Bar -->
+        <div class="export-actions">
+            <div class="container export-actions-container">
+                <button class="btn btn-success btn-large" id="generatePdf">
+                    📄 Générer PDF
+                </button>
+                <button class="btn btn-primary btn-large" id="downloadBtn">
+                    ⬇️ Télécharger
+                </button>
+                <button class="btn btn-secondary btn-large" id="copyClipboard">
+                    📋 Copier
+                </button>
+                <button class="btn btn-secondary btn-large" id="emailBtn">
+                    ✉️ Envoyer par email
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-section">
+                <div class="logo">
+                    <span class="logo-icon">📄</span>
+                    <span class="logo-text">Claude Chat Exporter</span>
+                </div>
+                <p>Exportez vos conversations Claude en documents professionnels facilement.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Liens utiles</h4>
+                <ul>
+                    <li><a href="#features">Fonctionnalités</a></li>
+                    <li><a href="#how-it-works">Comment ça marche</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Légal</h4>
+                <ul>
+                    <li><a href="#">Confidentialité</a></li>
+                    <li><a href="#">Conditions d'utilisation</a></li>
+                    <li><a href="#">Mentions légales</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="mailto:support@claudeexporter.com">support@claudeexporter.com</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">GitHub</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Claude Chat Exporter. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="services/app.js"></script>
+</body>
+</html>
