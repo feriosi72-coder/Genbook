@@ -1,0 +1,35 @@
+{
+  "name": "claude-chat-exporter",
+  "version": "1.0.0",
+  "description": "Outil d'export de conversations Claude en PDF",
+  "main": "backend/api/server.js",
+  "scripts": {
+    "lint:js": "eslint frontend/**/*.js",
+    "lint:css": "stylelint frontend/styles/*.css",
+    "lint:html": "htmlhint frontend/pages/*.html",
+    "lint": "npm run lint:js && npm run lint:css && npm run lint:html",
+    "format": "prettier --write \"frontend/**/*.{js,css,html}\"",
+    "check": "prettier --check \"frontend/**/*.{js,css,html}\"",
+    "test": "echo \"Running all linters...\" && npm run lint",
+    "start": "npx http-server frontend/pages -p 8080 -o"
+  },
+  "keywords": [
+    "claude",
+    "chat",
+    "export",
+    "pdf",
+    "conversation"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^10.4.0",
+    "eslint-plugin-html": "^8.1.4",
+    "eslint-plugin-jsdoc": "^62.9.0",
+    "htmlhint": "^1.9.2",
+    "http-server": "^14.1.1",
+    "prettier": "^3.8.3",
+    "stylelint": "^17.12.0",
+    "stylelint-config-standard": "^40.0.0"
+  }
+}
